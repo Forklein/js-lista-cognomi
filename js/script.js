@@ -9,7 +9,11 @@ console.log('Ciao Peppe');
 */
 
 
-var userSurname = prompt('Inserisci il tuo cognome:').trim();
+var userSurname = '';
+do {
+    userSurname = prompt('Inserisci il tuo cognome:').trim();
+} while (!userSurname || !isNaN(userSurname));
+
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 
 var result = document.getElementById('result');
