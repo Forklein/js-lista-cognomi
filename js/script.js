@@ -21,7 +21,7 @@ listSurname.sort();
 var position = '';
 var isinlist = false;
 
-for (var i = 0; i < listSurname.length; i++) {
+for (var i = 0; i < listSurname.length && isinlist == false; i++) {
     if (userSurname === listSurname[i]) {
         isinlist = true;
         position = i;
