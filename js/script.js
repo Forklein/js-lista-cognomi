@@ -9,16 +9,25 @@ console.log('Ciao Peppe');
 */
 
 
-var userSurname = prompt('Inserisci il tuo cognome').trim();
+var userSurname = prompt('Inserisci il tuo cognome:').trim();
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
-listSurname.push(userSurname);
-console.log(listSurname);
-listSurname.sort();
-console.log(listSurname);
-console.log(listSurname.length);
+var result = document.getElementById('result');
+var index = document.getElementById('index');
 
-var isPosition = false;
+listSurname.push(userSurname);
+listSurname.sort();
+
+var position = '';
+var isinlist = false;
 
 for (var i = 0; i < listSurname.length; i++) {
-    if ()
+    if (userSurname === listSurname[i]) {
+        isinlist = true;
+        position = i;
+    }
+}
+
+if (isinlist) {
+    result.innerHTML = '<li>' + listSurname + '</li>';
+    index.innerHTML = position + 1;
 }
