@@ -11,6 +11,7 @@ console.log('Ciao Peppe');
 
 var userSurname = prompt('Inserisci il tuo cognome:').trim();
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
+
 var result = document.getElementById('result');
 var index = document.getElementById('index');
 
@@ -29,5 +30,5 @@ for (var i = 0; i < listSurname.length; i++) {
 
 if (isinlist) {
     result.innerHTML = '<li>' + listSurname + '</li>';
-    index.innerHTML = position + 1;
+    index.innerHTML = 'Il cognome inserito è in posizione ' + ++position;
 }
