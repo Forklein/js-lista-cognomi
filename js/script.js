@@ -32,7 +32,10 @@ for (var i = 0; i < listSurname.length && isinlist == false; i++) {
     }
 }
 
+// ?ANOTHER SOLUTION
+console.log(listSurname.indexOf(userSurname, 0));
+
 if (isinlist) {
     result.innerHTML = '<li>' + listSurname + '</li>';
-    index.innerHTML = 'Il cognome inserito è in posizione ' + ++position;
+    index.innerHTML = 'Il cognome inserito è in posizione ' + (++position);
 }
